@@ -1,17 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const Booklist = () => {
+  return (
+    <section className="booklist">
+      <Book name="j" />
+      <Book />
+      <Book />
+      <Book />
+    </section>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Book = () => {
+  return (
+    <article className="book">
+      <img
+        src="https://m.media-amazon.com/images/I/91ke43dIxkL._SY522_.jpg"
+        alt="Iron Flame (The Empyrean, 2)"
+      />
+      <h2>Iron Flame (The Empyrean, 2)</h2>
+      <h4>Rebecca Yarros</h4>
+    </article>
+  );
+};
+
+root.render(<Booklist />);
